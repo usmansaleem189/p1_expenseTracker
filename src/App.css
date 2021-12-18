@@ -1,38 +1,153 @@
-.App {
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: rgb(228, 226, 226);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+.container {
+  margin: 30px auto;
+  width: 320px;
+}
+
+h2 {
+  margin-bottom: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.incomeExpenceContainer {
+  background-color: white;
+  box-shadow:2px 3px 8px #888888;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 0 50px;
+  margin: 20px auto;
+  border-radius: 5px;
+  
+}
+
+.incomeExpenceContainer > div {
+  text-align: center;
+}
+
+.balance {
+  text-align: center;
+  font-weight: bold;
+}
+
+.money {
+  font-size: 30px;
+}
+.income {
+  color: rgb(110, 233, 110);
+  font-weight: bold;
+}
+.expense {
+  color: rgb(235, 114, 114);
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.btn-add {
+  width: 100%;
+  background-color: rgb(78, 82, 85);
+  color: white;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 0;
+  font-weight: bold;
+}
+
+
+ul {
+
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+
+}
+
+
+li {
+display: flex;
+justify-content: space-between;
+position: relative;
+padding: 5px;
+margin: 2px 0;
+  
+}
+
+
+.btn {
+  cursor: pointer;
+  background-color: #da5645;
+  border: 0;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+
+li:hover .btn {
+  opacity: 1;
+}
+
+.plus {
+  border-right: 5px solid rgb(149, 236, 149);
+}
+
+.plus:hover {
+  background-color: rgb(149, 236, 149);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.minus {
+  border-right: 5px solid rgb(236, 142, 142);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.minus:hover {
+  background-color: rgb(236, 142, 142);
+  color: white;
+
 }
+
